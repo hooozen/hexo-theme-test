@@ -10,10 +10,9 @@ jobs:
     runs-on: windows-latest
     permissions:
       contents: write
+    container:
+      image: docker://pandoc/latex
     steps:
-      - uses: docker://pandoc/latex
-        with:
-          args: "--help"
       - uses: actions/checkout@v3
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3
