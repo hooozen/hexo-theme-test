@@ -10,6 +10,6 @@ cover: /assets/hozen-durdledoor.jpg
 
 <!--more-->
 
-![hozen 2023.6](/assets/hozen-durdledoor.jpg)
+![hozen 2023.6](/assets/hozen-durdledoor-l.jpg)
 
 照片拍摄于侏罗纪海岸线的 Durdle Door.

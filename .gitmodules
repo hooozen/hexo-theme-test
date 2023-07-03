@@ -1,3 +1,6 @@
 [submodule "themes/tranquility"]
 	path = themes/tranquility
 	url = git@github.com:hooozen/hexo-theme-tranquility.git
+[submodule "themes/academic"]
+	path = themes/academic
+	url = git@github.com:hooozen/hexo-theme-academic.git

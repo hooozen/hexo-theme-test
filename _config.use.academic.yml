@@ -1,0 +1,29 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Albert Einstein's research
+subtitle: ""
+description: ""
+keywords:
+author: Hozen
+language: en
+timezone: ""
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://hexotheme.hozen.site/academic
+
+# Directory
+public_dir: public/academic
+
+theme: academic
+
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: true
