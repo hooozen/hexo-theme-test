@@ -38,3 +38,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+
+      - name: Move CNAME to gh-pages
+        run: |
+          git checkout gh-pages
+          git checkout main -- source/CNAME
+          git add source/CNAME
+          git commit -m "Move CNAME to gh-pages"
+          git push origin gh-pages
