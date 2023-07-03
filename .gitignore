@@ -1,13 +1,12 @@
 .DS_Store
 Thumbs.db
-_multiconfig.yml
 db.json
 *.log
 node_modules/
 public/
 public*/
 .deploy*/
-_multiconfig.yml# Logs
+_multiconfig.yml
 logs
 *.log
 npm-debug.log*

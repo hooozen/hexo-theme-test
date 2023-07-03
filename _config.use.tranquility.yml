@@ -13,7 +13,7 @@ timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://hexotheme.hozen.site/tranquility
+url: http://theme.hozen.site/tranquility
 
 # Directory
 public_dir: public/tranquility

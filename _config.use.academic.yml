@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Albert Einstein's research
+title: Lilei's research
 subtitle: ""
 description: ""
 keywords:
@@ -13,7 +13,7 @@ timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://hexotheme.hozen.site/academic
+url: http://theme.hozen.site/academic
 
 # Directory
 public_dir: public/academic

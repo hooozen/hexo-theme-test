@@ -17,12 +17,12 @@ subpage: # 开启“子页”功能，详见 README
       path: feat # 若不设置则默认使用 name
       title: 特性测试 # 菜单名，如 开发者
       icon: /images/icon/icon-code.svg # 图标的路径
-      description: # 描述
+      description: 主题的功能测试 # 描述
     - name: baseTest # 文章的分类（category）名，如 developer
       path: base # 若不设置则默认使用 name
       title: 基础测试 # 菜单名，如 开发者
       icon: /images/icon/icon-pi.svg # 图标的路径
-      description: # 描述
+      description: 基于 hexo 官方的基础测试 # 描述
 
 index: # 配置首页个性化内容
   motto: "长风破浪会有时！"
