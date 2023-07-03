@@ -11,9 +11,7 @@ jobs:
     permissions:
       contents: write
     container:
-      image:
-        - docker://pandoc/latex
-        - image: docker://node:18
+      image: docker://hooozen/node-pandoc:latest
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 16.x
