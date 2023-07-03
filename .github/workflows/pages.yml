@@ -13,7 +13,8 @@ jobs:
     container:
       image: docker://hooozen/node-pandoc:latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           submodules: recursive
       - name: Use Node.js 16.x
@@ -39,10 +40,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 
+      - name: Checkout gh-pages
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
       - name: Move CNAME to gh-pages
         run: |
           git checkout gh-pages
-          git checkout main -- source/CNAME
-          git add source/CNAME
+          git checkout main -- source/CNAME:CNAME
+          git add CNAME
           git commit -m "Move CNAME to gh-pages"
           git push origin gh-pages
