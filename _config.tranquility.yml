@@ -106,6 +106,16 @@ baidu_site_verification:
 # See: https://tongji.baidu.com
 baidu_analytics: # <app_id>
 
+# 自定义字体，用于美化部分汉字的显示效果.
+# 可以通过替换 _font/ 目录下的字体文件替换自己喜欢的字体
+zh_font:
+  enable: true
+  fontName: sourceHanSerif
+  type: ttf
+  style:
+    - regular
+    - bold
+
 # 配置时间线 参考 README.md
 timeline:
   enable: true
@@ -123,3 +133,9 @@ timeline:
       color: "#568dc4"
       icon: /images/icon/icon-event.svg
       checked: false
+
+# 标签云
+tagcloud:
+  fancy: false
+  min_font: 14
+  max_font: 30
