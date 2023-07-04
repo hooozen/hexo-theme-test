@@ -155,6 +155,10 @@ figure.highlight .gutter pre {
 mjx-container {
   overflow: auto hidden;
 }
+.math.disply {
+  display: block;
+  overflow: auto hidden;
+}
 .wall-main {
   width: 100%;
 }
