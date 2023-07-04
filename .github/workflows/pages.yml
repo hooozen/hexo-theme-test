@@ -17,10 +17,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
       - name: Cache NPM dependencies
         uses: actions/cache@v3
         with:
@@ -32,23 +28,14 @@ jobs:
         run: npm install
       - name: Build tranquility
         run: npm run build-tranquility
+      - name: Clean config
+        run: rm -f _multiconfig.yml
       - name: Build academic
         run: npm run build-academic
+      - name: Set CNAME
+        run: cp source/CNAME public/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-  cname:
-    runs-on: ubuntu-22.04
-    permissions:
-      contents: write
-    needs: pages
-    steps:
-      - name: Move CNAME to gh-pages
-        run: |
-          git checkout gh-pages
-          git checkout main -- source/CNAME:CNAME
-          git add CNAME
-          git commit -m "Move CNAME to gh-pages"
-          git push origin gh-pages
