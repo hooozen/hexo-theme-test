@@ -4,18 +4,20 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
-    "build-tranquility": "hexo generate --config _config.yml,_config.use.tranquility.yml",
-    "build-academic": "hexo generate --config _config.yml,_config.use.academic.yml",
+    "build-tranquility": "hexo generate --config _config.yml,_build.tranquility.yml",
+    "build-academic": "hexo generate --config _config.yml,_build.academic.yml",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "trqlt": "hexo server --config _config.yml,_config.use.tranquility.yml"
+    "trqlt": "hexo server --config _config.yml,_build.tranquility.yml",
+    "acdmc": "hexo server --config _config.yml,_build.academic.yml"
   },
   "hexo": {
     "version": "6.3.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",
+    "hexo-filter-mathjax": "^0.9.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
