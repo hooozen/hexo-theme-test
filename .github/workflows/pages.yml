@@ -29,7 +29,7 @@ jobs:
       - name: Build tranquility
         run: npm run build-tranquility
       - name: Clean config
-        run: rm -f _multiconfig.yml
+        run: rm -f db.json
       - name: Build academic
         run: npm run build-academic
       - name: Set CNAME
