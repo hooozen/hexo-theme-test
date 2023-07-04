@@ -6,7 +6,7 @@ on:
       - main # default branch
 
 jobs:
-  generate:
+  pages:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
@@ -34,21 +34,17 @@ jobs:
         run: npm run build-tranquility
       - name: Build academic
         run: npm run build-academic
-
-  pages:
-    runs-on: ubuntu-22.04
-    permissions:
-      contents: write
-    steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-      - name: Checkout gh-pages
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages
+  cname:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    needs: pages
+    steps:
       - name: Move CNAME to gh-pages
         run: |
           git checkout gh-pages
