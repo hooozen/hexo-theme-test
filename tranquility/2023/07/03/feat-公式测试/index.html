@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>
+      
+        数学公式测试 | 致远
+      
+    </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/tranquility/images/apple-touch-icon.png" />
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/tranquility/images/favicon-32x32.png" />
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/tranquility/images/favicon-16x16.png" />
+    
+    
+      <link rel="mask-icon"
+            href="/tranquility/images/logo.svg"
+            color="" />
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/tranquility/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/tranquility/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/tranquility/css/layout.css' />
+    
+    
+  <link rel="stylesheet"
+        type="text/css"
+        href="/tranquility/css/post.css" />
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/tranquility/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/tranquility/images/logo.svg" />
+        </a>
+        <input id="navBtn" type="checkbox" />
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/tranquility/feat">特性测试</a>
+            
+              <a class="nav-menu-item" href="/tranquility/base">基础测试</a>
+            
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner--toc">
+      <div class="post-content__head">
+        <div class="post-title">数学公式测试</div>
+        <div class="post-info">
+          
+  
+    <a href="/tranquility/tags/math/" class="post-tag">#math</a>
+  
+
+
+          <span class="post-date">2023-07-03</span>
+        </div>
+      </div>
+      
+        <aside class="toc-outer">
+          <div class="toc-title">目录</div>
+          <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98"><span class="post-toc-text">问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="post-toc-text">思路</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1maximum-likelihood-estimation"><span class="post-toc-text">最大似然估计（Maximum
+Likelihood Estimation）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%A1%AE%E5%AE%9A-h_boldsymbolthetaboldsymbolx-%E7%9A%84%E5%BD%A2%E5%BC%8F"><span class="post-toc-text">确定 \(h_\boldsymbol\theta(\boldsymbol{x})\)
+的形式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B4%E7%90%86%E5%BE%97%E5%88%B0%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0-jboldsymboltheta"><span class="post-toc-text">整理得到代价函数 \(J(\boldsymbol\theta)\)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="post-toc-text">梯度下降</span></a></li></ol>
+          <a href="#" class="toc-top">回到顶部</a>
+        </aside>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p><em>原文来自 &lt;www.hozen.site&gt; [机器学习基础-“逻辑”回归
+(logistic regression) 的数学原理](<a
+target="_blank" rel="noopener" href="https://www.hozen.site/archives/33/"
+class="uri">https://www.hozen.site/archives/33/</a></em></p>
+<p>通过使用 logistic regression
+处理一个二分类问题来简要分析其中的数学原理。 <span id="more"></span></p>
+<h3 id="问题">问题</h3>
+<p>假设我们有这样一个问题，根据医学图像来判断病人的肿瘤为恶性还是良性，这就是一个二分类问题。</p>
+<p>相对于回归问题，分类问题的输出值为离散值。进一步地，二分类的输出值只有两个，通常称其为“正类”和“负类”，也可以用
+1 和 0 分别表示。</p>
+<h3 id="思路">思路</h3>
+<p>同回归问题一样，我们希望得到假设 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+对应的代价函数 <span
+class="math inline">\(J(\boldsymbol\theta)\)</span>，并通过最小化代价函数来确定合适的参数值
+<span class="math inline">\(\boldsymbol\theta\)</span>。</p>
+<p>下面推导代价函数：</p>
+<p>先明确一些记法：粗体字母代表向量，一般使用 <span
+class="math inline">\(\boldsymbol{x}\)</span>
+表示一个样例的特征向量，<span
+class="math inline">\(\boldsymbol{\theta}\)</span> 表示参数向量，实数
+<span class="math inline">\(y\in\{0,1\}\)</span>
+表示该样例的标记。当处理多个样例时，使用 <span
+class="math inline">\(\boldsymbol{x^{(j)}}\)</span> 表示第 <span
+class="math inline">\(j\)</span> 个样例的特征向量, 对应的标记为 <span
+class="math inline">\(y^{(j)}\)</span>。向量 <span
+class="math inline">\(\boldsymbol{y}\)</span>
+表示多个样例的标记向量。具体的：</p>
+<p><span class="math display">\[
+\boldsymbol{x^{(j)}}=\left[\begin{matrix}
+x^{(j)}_1 \\
+x^{(j)}_2 \\
+\vdots \\
+x^{(j)}_n \\
+\end{matrix}\right],\
+\boldsymbol\theta=\left[\begin{matrix}
+\theta_0 \\
+\theta_1 \\
+\vdots \\
+\theta_n \\
+\end{matrix}\right],\
+\boldsymbol{y} = \left[\begin{matrix}
+y^{(1)}\\
+y^{(2)}\\
+\vdots \\
+y^{(m)}\\
+\end{matrix}\right]
+\]</span></p>
+<h4 id="最大似然估计maximum-likelihood-estimation"><a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/4967925?fr=aladdin">最大似然估计</a>（<a
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Maximum_likelihood_estimation">Maximum
+Likelihood Estimation</a>）</h4>
+<p>与线性回归直接输出连续的结果不同，对于分类问题，我们期望能得到一个函数
+<span class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+来表示特征 <span class="math inline">\(\boldsymbol{x}\)</span>
+下结果为正类的概率，即 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x}) =
+P\{Y=1|\boldsymbol{x}\}\)</span>。自然地，若 <span
+class="math inline">\(h_\boldsymbol\theta(x) &gt; 0.5\)</span>
+我们倾向于认为结果为正类，反之倾向于负类。</p>
+<p>结合实例，这意味着我们输入病人医学图像的特征 <span
+class="math inline">\(x\)</span>，便可以给出该病人肿瘤为恶性的概率(将恶性划分为正类)，若该值大于
+<span class="math inline">\(0.5\)</span>
+则倾向于认为肿瘤为恶性，反之认为良性。</p>
+<p>由于二分类问题的结果非此即彼，所以应有：</p>
+<p><span class="math display">\[
+P\{Y=1|\boldsymbol{x}\} = h_\boldsymbol\theta(\boldsymbol{x})
+\]</span> <span class="math display">\[
+P\{Y=0|\boldsymbol{x}\} = 1 - h_\boldsymbol\theta(\boldsymbol{x})
+\]</span></p>
+<p>上式等价于： <span class="math display">\[
+P\{Y=y|\boldsymbol{x}\} = yh_\boldsymbol\theta(\boldsymbol{x}) +
+[1-y](1-h_\boldsymbol\theta(\boldsymbol{x})), \ y\in\{0,1\}
+\]</span></p>
+<p>对于 <span class="math inline">\(m\)</span> 个训练样本 <span
+class="math inline">\(\{\boldsymbol{x}^{(j)}, y^{(j)}\},\
+j=1,2,3,\cdots,m\)</span>，将其视为随机事件，则每一个样本的出现的概率为:
+<span class="math display">\[
+P\{Y=y^{(j)}|\boldsymbol{x}^{(j)}\} =
+y^{(j)}h_\boldsymbol\theta(\boldsymbol{x}^{(j)})+(1-y^{(j)})[1-h_\boldsymbol\theta(\boldsymbol{x}^{(j)})],\
+y^{(j)}\in\{0,1\}
+\]</span></p>
+<p>由于每个样本相互独立，则出现该样本的概率为： <span
+class="math display">\[
+\prod_{j=1}^m P\{Y=y^{(j)}|\boldsymbol{x}^{(j)}\},\ y^{(j)} \in \{0, 1\}
+\]</span> 即： <span class="math display">\[
+\prod_{j=1}^m \left\{ y^{(j)}h_\boldsymbol\theta(\boldsymbol{x}^{(j)}) +
+(1-y^{(j)})[1-h_\boldsymbol\theta(\boldsymbol{x}^{(j)})] \right\},\
+y^{(j)} \in \{0,1\}
+\]</span></p>
+<p>至此我们得到一个关于 <span
+class="math inline">\(\boldsymbol\theta\)</span> 的函数，记为 <span
+class="math inline">\(L(\boldsymbol\theta)\)</span>，该函数值代表了出现该训练样本的概率。最大似然估法计考虑这样一个问题，为什么会出现这样的样本分布而不是其他的分布呢？我们只能认为出现这样的分布概率是大于其他分布的，也就是说只有出现该样本分布的概率
+<span class="math inline">\(L(\boldsymbol\theta)\)</span>
+尽可能的大我们才得到了这个样本分布。因此我们只需求得 <span
+class="math inline">\(j(\boldsymbol\theta)\)</span> 取得最大值所对应的
+<span class="math inline">\(\hat{\boldsymbol\theta}\)</span>，便是我们对
+<span class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+参数值 <span class="math inline">\(\boldsymbol\theta\)</span>
+合理估计。这便是最大似然参数估计法的思想。</p>
+<p>至此，我们可将代价函数看作 <span
+class="math inline">\(-L(\boldsymbol\theta)\)</span>，我们只有使代价函数尽可能的小，即
+<span class="math inline">\(L(\boldsymbol\theta)\)</span>
+尽可能的大才能得到合理的 <span
+class="math inline">\(\boldsymbol\theta\)</span>。而 <span
+class="math inline">\(-L(\boldsymbol\theta)\)</span> 中的 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+还不明确，我们需要明确其形式。</p>
+<h4 id="确定-h_boldsymbolthetaboldsymbolx-的形式">确定 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+的形式</h4>
+<p>显然线性回归中的假设函数 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x}) =
+\boldsymbol\theta_0 + \sum\limits_{i=1}^n\boldsymbol\theta_ix_i\)</span>
+的形式不满足分类问题，因为在分类问题中我们期望把得到的 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+看作是一个概率，所以其值应该是在区间 <span
+class="math inline">\([0,1]\)</span>
+内的。为此，我们可以对原函数进行“挤压”，使其值域属于 <span
+class="math inline">\((0,1)\)</span>。此时便用到了 <a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/S%E5%9E%8B%E5%87%BD%E6%95%B0/19178062?fr=aladdin">S
+型函数</a>（<a
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Sigmoid_function">Sigmoid
+function</a>）: <span class="math display">\[
+sigmod(z) = \frac{1}{1+e^{-z}},\ z \in \mathbf{R}
+\]</span></p>
+<p>所以令 <span class="math display">\[
+h_\boldsymbol\theta(\boldsymbol{x}) = \frac{1}{1 + e^{-z}},\
+z = \boldsymbol\theta_0 + \sum\limits_{i=1}^n\boldsymbol\theta_ix_i
+\]</span></p>
+<p>其中 <span class="math inline">\(z\)</span> 也可记为矩阵形式： <span
+class="math display">\[
+\ z = \boldsymbol{\theta}^T \left[ \begin{matrix}1 \\ \boldsymbol{x}
+\end{matrix} \right]
+\]</span></p>
+<p>至此我们就得到了 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+的表达式。</p>
+<h4 id="整理得到代价函数-jboldsymboltheta">整理得到代价函数 <span
+class="math inline">\(J(\boldsymbol\theta)\)</span></h4>
+<p>确定了 <span
+class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})\)</span>
+形式后，<span class="math inline">\(L(\boldsymbol\theta)\)</span>
+的形式完全确定，在给定训练数据下是一个关于 <span
+class="math inline">\(\boldsymbol\theta\)</span> 的函数。我们可以使用
+<span class="math inline">\(-L(\boldsymbol\theta)\)</span>
+作为代价函数，但在最大似然估计法中更常用的方法是对 <span
+class="math inline">\(L(\boldsymbol\theta)\)</span> 取对数化简（<span
+class="math inline">\(\ln\)</span>
+函数的单调性保证了化简前后同时取得最值），令 <span
+class="math display">\[
+J(\boldsymbol\theta) = -\frac1{m}\ln L(\boldsymbol\theta)
+\]</span></p>
+<p>进一步得到： <span class="math display">\[
+J(\boldsymbol\theta) =
+\begin{cases}
+-\frac1{m}\sum\limits_{j=1}^m
+\ln[h_\boldsymbol\theta(\boldsymbol{x}^{(j)})], &amp; y^{(j)} = 1.\\
+-\frac1{m}\sum\limits_{j=1}^m
+\ln[1-h_\boldsymbol\theta(\boldsymbol{x}^{(j)})], &amp; y^{(j)}=0.
+\end{cases}
+\]</span></p>
+<p>同样可合并，写为: <span class="math display">\[
+J(\boldsymbol\theta) =
+-\frac1{m}\sum_{j=1}^m\Big(y^{(j)}\ln[h_\boldsymbol\theta(\boldsymbol{x}^{(j)})]
++ (1-y^{(j)})\ln[1-h_\boldsymbol\theta(\boldsymbol{x}^{(j)})]\Big)
+\]</span></p>
+<p>至此便得到了代价函数 <span
+class="math inline">\(J(\boldsymbol\theta)\)</span>
+的表达式，接下来就是最小化代价函数以得到合适的参数向量 <span
+class="math inline">\(\boldsymbol{\theta}\)</span></p>
+<h3 id="梯度下降">梯度下降</h3>
+<p>梯度下降的核心在于求得代价函数的梯度 <span
+class="math inline">\(\mathbf{Grad}J(\boldsymbol\theta)\)</span>，由高等数学知识可知:
+<span class="math display">\[
+\mathbf{Grad}J(\boldsymbol\theta) =
+(\frac{\partial{J}}{\partial\boldsymbol{\theta}_0},
+\frac{\partial{J}}{\partial\boldsymbol{\theta}_1}, \cdots,
+\frac{\partial{J}}{\partial\boldsymbol{\theta}_n})
+\]</span></p>
+<p>下面求 <span class="math inline">\(\frac{\partial
+J}{\partial\boldsymbol{\theta}_i}\)</span>：</p>
+<p>先将 <span class="math inline">\(h_\boldsymbol\theta(\boldsymbol{x})
+= \frac1{1+e^{-z}}\)</span> 带入 <span
+class="math inline">\(J(\boldsymbol\theta)\)</span>，并化简，可得：</p>
+<p><span class="math display">\[
+J(\boldsymbol\theta) =
+\frac1{m}\sum\limits_{j=1}^m\left[\ln(1+e^{z^{(j)}}) -
+y^{(j)}z^{(j)}\right],\ z^{(j)} = \boldsymbol{\theta}^T\left[
+\begin{matrix} 1 \\ \boldsymbol{x}^{(j)} \end{matrix} \right]
+\]</span></p>
+<p>则有：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial{J}}{\partial\boldsymbol\theta_i} &amp;= \frac{\partial
+J}{\partial z} \cdot \frac{\partial z}{\partial\boldsymbol\theta_i} \\
+&amp;=
+\frac1{m}\sum\limits_{j=1}^m\Big(\frac{e^{z^{(j)}}}{1+e^{z^{(j)}}}-y^{(j)}\Big)x^{(j)}*i
+\\
+&amp;= \frac1{m}\sum*{j=1}^{m}\left[h_\boldsymbol\theta(x^{(j)}) -
+y^{(j)}\right]x_i^{(j)}
+\end{aligned}
+\]</span></p>
+<p>至此我们就求出了代价函数对于每个参数 <span
+class="math inline">\(\boldsymbol\theta_i\)</span>
+的偏导，我们就可以使用梯度下降法来求得使代价函数足够小时的所有参数了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 选取合适的下降率 alpha<br>repeat <span class="hljs-keyword">until</span> converge &#123;<br>  theta0 := theta0 - alpha * grad0;<br>  theta1 := theta1 - alpha * grad1;<br>  ...<br>  thetan := thetan - alpha * gradn;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>在很多场景下使用矩阵运算往往具有更高的效率，下面根据 <span
+class="math inline">\(\frac{\partial
+J}{\partial\boldsymbol\theta_i}\)</span> 的计算公式可得到 <span
+class="math inline">\(\frac{\partial
+J}{\partial\boldsymbol{\theta}}\)</span> 的矩阵表示法：</p>
+<p>首先记: <span class="math display">\[
+\boldsymbol{X} = \left[
+  \begin{matrix}
+    1 &amp; [x^{(1)}]^T \\
+    1 &amp; [x^{(2)}]^T \\
+    \vdots &amp; \vdots \\
+    1 &amp; [x^{(m)}]^T \\
+  \end{matrix}
+  \right]
+\]</span></p>
+<p>则有： <span class="math display">\[
+\frac{\partial J}{\partial\boldsymbol{\theta}}
+=
+\frac1m\boldsymbol{X}^T\left[h_\boldsymbol\theta(X\times\boldsymbol{\theta})
+- y\right]
+\]</span></p>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/tranquility/assets/author-face.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/tranquility/assets/pay-code.jpg" />
+  </div>
+  <div class="like-text">“给作者倒杯卡布奇诺”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/tranquility/2023/07/03/feat-%E5%B0%81%E9%9D%A2%E6%B5%8B%E8%AF%95/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>封面测试</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/tranquility/2023/07/02/feat-%E7%9B%AE%E5%BD%95%E6%B5%8B%E8%AF%95/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      目录测试
+    </a>
+  
+</div>
+
+    
+      <div class="related-post">
+  <div class="related__head">
+  
+    <a href="/tranquility/tags/math/" class="post-tag">#math</a>
+  
+
+</div>
+  <div class="realated__body">
+    
+      <div class="null"><div class="null-item"><div class="null-title"><a href="/tranquility/2023/07/03/faet-长代码块测试/" title="超宽代码块测试" rel="bookmark">超宽代码块测试</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2023/07/03/feat-封面测试/" title="封面测试" rel="bookmark">封面测试</a></div></div></div>
+    
+  </div>
+</div>
+
+    
+    <div id="gitalk-container"></div>
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              <div class="matts">海</div><div class="matts">内</div><div class="matts">存</div><div class="matts">知</div><div class="matts">己</div>
+            </div>
+          
+            <div class="foot-line">
+              <div class="matts">天</div><div class="matts">涯</div><div class="matts">若</div><div class="matts">比</div><div class="matts">邻</div>
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link+.svg" />
+                  <a class="foot-link"
+                     href="mailto:example@email.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-github.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-wx.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI3NzQ4NDkzNg==&mid=2247484469&idx=1&sn=8a442bb67397f52cce5c38c3f9b41e36&chksm=eb64c0d2dc1349c40d2e1bb55615ae28b3f2951be22f00717b9ade98c851082e42dc666ab45d#rd">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-zh.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://www.zhihu.com/">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-email.svg" />
+                <a class="foot-link" href="mailto:example@email.com">example@email.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="http://theme.hozen.site/tranquility">致远</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+      <script src="https://unpkg.com/js-polyfills@0.1.43/es6.js"></script>
+      <script id="MathJax-script"
+              async
+              src="https://www.unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+    
+    
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const param = JSON.parse('{"enable":true,"owner":"hooozen","admin":null,"repo":"hexo-theme-test","clientID":"2dd3e808150d02b6810b","clientSecret":"35312c390f46acf9b1ac500f0f99f508b8c7ffd1","distractionFreeMode":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN"}')
+  param.id = location.pathname
+  const gitalk = new Gitalk(param)
+  gitalk.render('gitalk-container')
+</script>
+
+
+  </body>
+</html>
