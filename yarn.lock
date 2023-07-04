@@ -1256,20 +1256,6 @@
     "graceful-fs" "^4.2.10"
     "hexo-util" "^2.7.0"
 
-"hexo-generator-archive@^2.0.0":
-  "integrity" "sha512-KikJk7dGFbtNHOgqtLFGf5T/S8n1paGp+Gy0KfVDz+HKYhGbXOouyiZkmc3O9KrYt6ja14rmkMhq7KKGtvfehw=="
-  "resolved" "https://registry.npmjs.org/hexo-generator-archive/-/hexo-generator-archive-2.0.0.tgz"
-  "version" "2.0.0"
-  dependencies:
-    "hexo-pagination" "3.0.0"
-
-"hexo-generator-category@^2.0.0":
-  "integrity" "sha512-9OduRBf3WeRDa4BR0kAfRjOVHur7v3fm0NKAwbjUiqULigAdNZVZPO3cHKW2MlBbl/lI5PuWdhQ9zZ99CCCAgQ=="
-  "resolved" "https://registry.npmjs.org/hexo-generator-category/-/hexo-generator-category-2.0.0.tgz"
-  "version" "2.0.0"
-  dependencies:
-    "hexo-pagination" "3.0.0"
-
 "hexo-generator-index@^3.0.0":
   "integrity" "sha512-83AuNN4cWdLVi//3ugR8E3kR6rrOwhXZt+hOCm1IjtIGj353/GlrtpMHpqZHU5kqipzj4miy9dweVdukXglVWw=="
   "resolved" "https://registry.npmjs.org/hexo-generator-index/-/hexo-generator-index-3.0.0.tgz"
