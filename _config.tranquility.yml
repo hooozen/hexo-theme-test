@@ -47,17 +47,19 @@ foot:
 links: # 朋友
   - name: "Theme Tranquility"
     url: https://github.com/hooozen/hexo-theme-tranquility
+  - name: "浩然的主页"
+    url: https://hozen.site
 
-social: # 账号
-  - name: "github"
+social:
+  - name: "hooozen"
     icon: "/images/logo-github.svg"
-    url: https://github.com/
-  - name: "微信公众号"
+    url: https://github.com/hooozen
+  - name: "谁在胡言乱语"
     icon: "/images/logo-wx.svg"
     url: https://mp.weixin.qq.com/s?__biz=MzI3NzQ4NDkzNg==&mid=2247484469&idx=1&sn=8a442bb67397f52cce5c38c3f9b41e36&chksm=eb64c0d2dc1349c40d2e1bb55615ae28b3f2951be22f00717b9ade98c851082e42dc666ab45d#rd
-  - name: "知乎"
+  - name: "Mundooo"
     icon: "/images/logo-zh.svg"
-    url: https://www.zhihu.com/
+    url: https://www.zhihu.com/people/hozen
 
 reward: # 赞赏
   enable: true
@@ -68,12 +70,12 @@ reward: # 赞赏
 
 # see https://github.com/gitalk/gitalk
 gitalk: # gitalk 评论
-  enable: true
-  owner: hooozen # MUST HAVE, Your Github Username
+  enable: false
+  owner: # MUST HAVE, Your Github Username
   admin:
-  repo: hexo-theme-test # MUST HAVE, The name of the repo you use to store Gitment comments
-  clientID: 2dd3e808150d02b6810b # MUST HAVE, Github client id for the Gitment
-  clientSecret: 35312c390f46acf9b1ac500f0f99f508b8c7ffd1 # EITHER this or proxy_gateway, Github access secret token for the Gitment
+  repo: # MUST HAVE, The name of the repo you use to store Gitment comments
+  clientID: # MUST HAVE, Github client id for the Gitment
+  clientSecret: # EITHER this or proxy_gateway, Github access secret token for the Gitment
 
   distractionFreeMode: false # Facebook-like distraction free mode
   # When the official proxy is not available, you can change it to your own proxy address
@@ -103,15 +105,6 @@ baidu_site_verification:
 # Baidu Analytics
 # See: https://tongji.baidu.com
 baidu_analytics: # <app_id>
-
-custom_font:
-  name: "SourceHanSerifCN"
-  extName: "ttf"
-  folder: "font/SourceHanSerifCN/"
-  subFamily:
-    - regular.ttf
-    - bold.ttf
-  targetPath: "font/"
 
 # 配置时间线 参考 README.md
 timeline:
