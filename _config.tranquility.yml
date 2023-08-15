@@ -167,7 +167,7 @@ cv:
           link: https://github.com/hooozen/hexo-theme-tranquility
           description: 响应式博客网站
           content:
-            - 2022/12 至今, 60+ stars
+            - 2022/12 至今, 70+ stars
             - "技术栈: Node, HTML5 Web"
             - "职责: 产品需求、UI 设计、开发测试、运营维护，等"
             - "收获：响应式页面设计及开发, 页面性能优化及 SEO, 开源项目开发与维护, Node 项目源码阅读和调试，开源社区参与和贡献"
@@ -180,10 +180,10 @@ cv:
             - "职责: 产品需求、UI 设计、前后端开发测试、运维运营，等"
             - "收获: 微信小程序开发运营, Serverless 开发, NoSQL 数据库, 接口设计和封装, Token 管理"
         - title: Steam 创意工坊作品
-          discription: 基于 wallpaper engine 的桌面动态壁纸
-          link: https://www.hozen.site/archives/59/
+          description: 基于 wallpaper engine 的桌面动态壁纸
+          link: https://steamcommunity.com/sharedfiles/filedetails/?id=2222111958
           content:
-            - 2020/9 至今，17k+ 订阅
+            - 2020/9 至今，18k+ 订阅
             - 技术栈：TypeScript，CSS3.
             - 收获：基于前端技术的桌面应用开发，面向对象技术，网页动画.
     skill:
@@ -205,4 +205,4 @@ cv:
       title: 个人小结
       content:
         - 软件工程和统计学交叉学科背景, 数学基础好, 学习能力强. 项目经验丰富, 善于中英文文献资料检索阅读, 解决问题的能力强. 热爱软件开发, 具备优秀的文档和制图能力, 喜欢知识分享和输出.
-        - 爱好阅读和学习, 积极的人生观和性格, 愿意为优秀的产品和团队付出热情和努力. 
+        - 爱好阅读和学习, 积极的人生观和性格, 愿意为优秀的产品和团队付出热情和努力.
