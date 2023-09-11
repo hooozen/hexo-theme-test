@@ -141,6 +141,9 @@ tagcloud:
   max_font: 30
 
 cv:
+  enable: true
+  showInNav: true
+  iconPrefix: fas
   keywords: 前端,简历,前端开发,AI,软件工程师
   description: 李浩然的简历
   title: 李浩然的简历
@@ -161,9 +164,7 @@ cv:
         - 2014.9 至 2018.6，长安大学，软件工程，学士学位
     chapters:
       - title: "个人项目"
-        icon:
-          name: person-digging
-          type: fas
+        icon: person-digging
         tips: 请点击项目名称查看项目详情
         sections:
           - title: picStitch
@@ -192,9 +193,7 @@ cv:
             content:
               - 基于 wallpaper engine 的桌面动态壁纸(18k订阅), 学术风博客系统, Web 你画我猜小游戏等。详情见 github.com/hooozen。
       - title: 工作经验
-        icon:
-          name: laptop-code
-          type: fas
+        icon: laptop-code
         sections:
           - title: 杭州税友软件集团有限公司
             description: 2018.7 - 2019.3
@@ -207,18 +206,14 @@ cv:
             content:
               - 考研结束的假期参与了若干外包项目，主要涉及 Vue 技术栈的后台管理系统以及物联网创业项目的小程序和商品配送管理系统的开发。线上和需求以及后台开发人员进行合作, 得到同事和客户认可.
       - title: 奖项证书
-        icon:
-          name: trophy
-          type: fas
+        icon: trophy
         list: true
         content:
           - 第十八届中国研究生数学建模竞赛, 全国二等奖, 使用机器学习和神经网络解决 UWB 定位问题
           - 招商银行第七届 FinTech 竞赛(数据赛道), 61/3000 名, 客户金融产品配置行为预测
           - 全国计算机信息高新技术考试合格证书, 国家职业资格四级, 图形图像处理模块(Photoshop平台)
       - title: 个人小结
-        icon:
-          name: ranking-star
-          type: fas
+        icon: ranking-star
         content:
           - 软件工程和统计学交叉学科背景, 数学基础好, 学习能力强. 项目经验丰富, 善于中英文文献资料检索阅读, 解决问题的能力强. 热爱软件开发, 具备优秀的文档和制图能力, 喜欢知识分享和输出.
           - 爱好阅读和学习, 积极的人生观和性格, 愿意为优秀的产品和团队付出热情和努力.
