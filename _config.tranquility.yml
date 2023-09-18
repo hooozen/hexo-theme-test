@@ -144,76 +144,62 @@ cv:
   enable: true
   showInNav: true
   iconPrefix: fas
-  keywords: 前端,简历,前端开发,AI,软件工程师
-  description: 李浩然的简历
-  title: 李浩然的简历
+  keywords: 简历,李白
+  description: 李白的简历
+  title: 李白的简历
   content:
-    title: 李浩然
+    title: 李白
     baseInfo:
-      - 2024 应届硕士
-      - 前端开发
-    tel: 13175116769
-    email: Hozen@live.com
-    github: hooozen
-    blog: hozen.site
-    blogHref: https://hozen.site
+      - 唐朝
+      - 诗人
+      - 太白
+      - 青莲居士
+    tel: 八八八八八
+    email: 李白@唐.中文
+    github: 暂无
+    blog: Tranquility
+    blogHref: https://theme.hozen.site/tranquility/
     edu:
       title: "教育背景"
       content:
-        - 2021.9 至今，河北大学，统计学，硕士在读
-        - 2014.9 至 2018.6，长安大学，软件工程，学士学位
+        - 701 至 715，修习诗词剑术
+        - 718 至 724，蜀地隐居
     chapters:
-      - title: "个人项目"
+      - title: "代表作品"
         icon: person-digging
         tips: 请点击项目名称查看项目详情
         sections:
-          - title: picStitch
-            link: https://ps.hozen.site
-            description: 长图拼接 Web App
+          - title: 蜀道难
+            link: https://so.gushiwen.cn/shiwenv_d59ec5d6c91c.aspx
+            description: 乐府诗、浪漫主义
             content:
-              - 2023/9 至今
-              - "技术栈: Vue3+ts+vite+pinia, 移动 Web, Canvas, PWA"
-              - 主要实现了 Web 端图片的编辑和保存、图片拖动排序等功能。在开发过程中实践了面向对象开发、移动端适配、Vue3 底层组件封装、HTML5 的 Canvas、Drag、SVG 等技术. 详情：hozen.site/archives/69/
-          - title: Tranquility
-            link: https://github.com/hooozen/hexo-theme-tranquility
-            description: 响应式博客网站
+              - 天宝元年
+              - 这首诗是袭用乐府旧题，意在送友人入蜀。诗人以浪漫主义的手法，展开丰富的想象，艺术地再现了蜀道峥嵘，突兀，强悍、崎岖等奇丽惊险和不可凌越的磅礴气势，借以歌咏蜀地山川的壮秀，显示出祖国山河的雄伟壮丽。
+              - 至于本诗是否有更深的寓意，历代有各种不同看法。然而就诗论诗，不一定强析有寓意。但从诗中，“所守或匪亲，化为狼与豺”看，却是在写蜀地山川峻美的同时，告诫当局，蜀地险要，应好好用人防守。
+              - 诗采用律体与散文间杂，文句参差，笔意纵横，豪放洒脱。全诗感情强烈，一唱三叹，回环反复，读来令人心潮激荡。
+          - title: 将进酒
+            link: https://so.gushiwen.cn/shiwenv_ee16df5673bc.aspx
+            description: 乐府七言歌行
             content:
-              - 2022/12 至今, 80+ stars
-              - "技术栈: Node, Web page"
-              - 主要实现了个人主页展示、博客编写和发布、网站 SEO、评论赞赏等博客系统。涉及 Node 开发、响应式页面设计及开发、页面性能优化及 SEO、字体提取压缩等技术。开发过程中调试了许多开源插件, 并贡献了部分文档和代码。
-          - title: 篮球裁判手势挑战
-            description: 微信答题挑战小程序
-            link: https://www.hozen.site/archives/59/
-            content:
-              - 2022/10 至今, 4k+ uv
-              - "技术栈: 微信小程序, Serverless"
-              - "主要实现小程序答题挑战的交互逻辑以及积分排名、题目难度自动学习更新等功能。涉及微信小程序开发、Serverless 应用、NoSQL 数据库、接口设计和封装、Token 管理等技术"
-          - title: 其他
-            link: https://steamcommunity.com/sharedfiles/filedetails/?id=2222111958
-            content:
-              - 基于 wallpaper engine 的桌面动态壁纸(18k订阅), 学术风博客系统, Web 你画我猜小游戏等。详情见 github.com/hooozen。
+              - 开元二十二年
+              - 这首诗是诗人当时和友人岑勋在嵩山另一老友元丹丘的颍阳山居作客，作者正值仕途遇挫之际，所以借酒兴诗，来了一次酣畅淋漓的抒发。在这首诗里，李白“借题发挥”，借酒消愁，感叹人生易老，抒发了自己怀才不遇的心情。
+              - 这首诗十分形象的体现了李白桀骜不驯的性格：对自己充满自信、孤高自傲、热情豪放，“天生我材必有用”、“人生得意须尽欢”。全诗气势豪迈，感情豪放，言语流畅，具有极强的感染力。李白咏酒的诗歌非常能体现他的个性，思想内容深沉，艺术表现成熟。《将进酒》即为其代表作。
       - title: 工作经验
         icon: laptop-code
         sections:
-          - title: 杭州税友软件集团有限公司
-            description: 2018.7 - 2019.3
+          - title: 大唐翰林供奉
+            description: 743 - 744
             content:
-              - 主要参与公司 B 端报税系统及员工薪税服务系统的客户端开发, 基于 CEF 和 VUE 技术栈.
-              - 作为主要成员参与了公司统一 UI 库的开发及文档和 Demo 开发, 基于 ElementUI 封装定制.
-              - 业务能力得到 leader 认可, 和同事相处愉快, 获得部门年度最佳新人奖.
-          - title: 兼职经验
-            description: 2021 - 2022
-            content:
-              - 考研结束的假期参与了若干外包项目，主要涉及 Vue 技术栈的后台管理系统以及物联网创业项目的小程序和商品配送管理系统的开发。线上和需求以及后台开发人员进行合作, 得到同事和客户认可.
-      - title: 奖项证书
+              - 赐宫锦袍。暮春，兴庆池牡丹盛开，玄宗与杨玉环同赏，李白又奉诏作《清平调》。对御用文人生活日渐厌倦，始纵酒以自昏秽。
+              - 与贺知章等人结“酒中八仙”之游，玄宗呼之不朝。尝奉诏醉中起草诏书，引足令高力士脱靴，宫中人恨之，谗谤于玄宗，玄宗疏之，后玄宗赐金放还。
+      - title: 荣誉奖项
         icon: trophy
         list: true
         content:
-          - 第十八届中国研究生数学建模竞赛, 全国二等奖, 使用机器学习和神经网络解决 UWB 定位问题
-          - 招商银行第七届 FinTech 竞赛(数据赛道), 61/3000 名, 客户金融产品配置行为预测
-          - 全国计算机信息高新技术考试合格证书, 国家职业资格四级, 图形图像处理模块(Photoshop平台)
+          - 诗仙
+          - 酒中八仙
       - title: 个人小结
         icon: ranking-star
         content:
-          - 软件工程和统计学交叉学科背景, 数学基础好, 学习能力强. 项目经验丰富, 善于中英文文献资料检索阅读, 解决问题的能力强. 热爱软件开发, 具备优秀的文档和制图能力, 喜欢知识分享和输出.
-          - 爱好阅读和学习, 积极的人生观和性格, 愿意为优秀的产品和团队付出热情和努力.
+          - 为人爽朗大方，乐于交友，爱好饮酒作诗，名列“酒中八仙”  。曾经得到唐玄宗李隆基赏识，担任翰林供奉， 赐金放还，游历全国，先后迎娶宰相许圉师、宗楚客的孙女。唐肃宗即位后，卷入永王之乱，流放夜郎，辗转到达当涂县令李阳冰家。上元二年，去世，时年六十二。
+          - 著有《李太白集》，代表作有《望庐山瀑布》《行路难》《蜀道难》《将进酒》《早发白帝城》等。 李白所作词赋，就其开创意义及艺术成就而言，享有极为崇高的地位，后世誉为“诗仙”，与诗圣杜甫并称“李杜”。
