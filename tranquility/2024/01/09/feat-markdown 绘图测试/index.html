@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <title>
       
-        图片 | 致远
+        markdown 绘图测试 | 致远
       
     </title>
     <meta name="description" content=""/>
@@ -89,13 +89,13 @@
   <article class="post-content">
     <div class="post-inner">
       <div class="post-content__head">
-        <div class="post-title">图片</div>
+        <div class="post-title">markdown 绘图测试</div>
         <div class="post-info">
           
-  <a href="/tranquility/tags/media/" class="post-tag">#media</a>
+  <a href="/tranquility/tags/markdown/" class="post-tag">#markdown</a>
 
 
-          <span class="post-date">2013-12-26</span>
+          <span class="post-date">2024-01-09</span>
         </div>
       </div>
       
@@ -105,18 +105,41 @@
             
           </div>
         
-        <p>This is a image test post.</p>
-<p><img src="/assets/wallpaper-2572384.jpg" /></p>
-<figure>
-<img src="/assets/wallpaper-2311325.jpg" alt="Caption" />
-<figcaption aria-hidden="true">Caption</figcaption>
-</figure>
-<p><img src="/assets/wallpaper-878514.jpg" /></p>
-<figure>
-<img src="https://via.placeholder.com/350x150.jpg"
-alt="Small Picture" />
-<figcaption aria-hidden="true">Small Picture</figcaption>
-</figure>
+        <p>本文测试 markdwon 的绘图扩展 mermaid，该插件支持在 markdown
+中插入各类图表。</p>
+<span id="more"></span>
+<h2 id="准备工作">准备工作</h2>
+<ul>
+<li>首先安装依赖</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-filter-mermaid-diagrams<br></code></pre></td></tr></table></figure>
+<ul>
+<li>在配置文件中启用</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">mermaid:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 启用 Mermaid 增强</span><br>  <span class="hljs-attr">version:</span> <span class="hljs-string">latest</span><br>  <span class="hljs-attr">options:</span> <br>    <span class="hljs-attr">startOnload:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<h2 id="使用">使用</h2>
+<p>然后就可以在 markdown 文章中绘图了（用法就是代码块设置为
+mermaid）</p>
+<pre class="md">
+&#96;&#96;&#96;mermaid
+  graph LR
+    A --> B
+    A --> D
+&#96;&#96;&#96;
+</pre>
+<p>渲染为：</p>
+<pre class="mermaid">graph LR
+  A --> B
+  A --> D</pre>
+<h2 id="其他">其他</h2>
+<ul>
+<li><p>如果想要在本地预览 mermaid 的渲染结果，需要支持 mermaid 的
+markdown 编译器。如果使用 vscode，需要下载 <a
+target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid">Markdown
+Preview Mermaid Support</a> 这个插件。</p></li>
+<li><p>Mermaid 的具体的用法可参考 <a
+target="_blank" rel="noopener" href="http://mermaid.js.org/intro/">Mermaid 指引</a>。</p></li>
+</ul>
 
       </div>
     </div>
@@ -160,23 +183,11 @@ alt="Small Picture" />
     
     <div class="post-nav">
   
-    <a class="post-nav-item-left" href="/tranquility/2018/07/24/markdown/">
-      <div class="text-align">
-        <svg t="1670570876164"
-             class="icon"
-             viewBox="0 0 1024 1024"
-             width="16"
-             height="16">
-          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
-        </svg>
-        <span class="text-small">上一篇</span>
-      </div>
-      <div>Markdown 样式测试</div>
-    </a>
+    <div class="post-nav-item-left"></div>
   
   <div class="vhr"></div>
   
-    <a class="post-nav-item-right" href="/tranquility/2013/12/25/no-title/">
+    <a class="post-nav-item-right" href="/tranquility/2023/09/21/feat-icon%E6%B5%8B%E8%AF%95/">
       <div class="text-align">
         <span class="text-small">下一篇</span>
         <svg t="1670570876164"
@@ -188,7 +199,7 @@ alt="Small Picture" />
           <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
         </svg>
       </div>
-      未命名
+      fontawesome-icons 测试
     </a>
   
 </div>
@@ -196,12 +207,12 @@ alt="Small Picture" />
     
       <div class="related-post">
   <div class="related__head">
-  <a href="/tranquility/tags/media/" class="post-tag">#media</a>
+  <a href="/tranquility/tags/markdown/" class="post-tag">#markdown</a>
 
 </div>
   <div class="realated__body">
     
-      <div class="null"><div class="null-item"><div class="null-title"><a href="/tranquility/2013/12/25/gallery-post/" title="图集文章" rel="bookmark">图集文章</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2013/12/25/videos/" title="视频" rel="bookmark">视频</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2019/07/25/code-highlight/" title="代码高亮" rel="bookmark">代码高亮</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2013/12/24/elements/" title="元素样式" rel="bookmark">元素样式</a></div></div></div>
+      <div class="null"><div class="null-item"><div class="null-title"><a href="/tranquility/2013/12/24/elements/" title="元素样式" rel="bookmark">元素样式</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2018/07/24/markdown/" title="Markdown 样式测试" rel="bookmark">Markdown 样式测试</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2023/09/21/feat-icon测试/" title="fontawesome-icons 测试" rel="bookmark">fontawesome-icons 测试</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2023/07/03/feat-公式测试/" title="数学公式测试" rel="bookmark">数学公式测试</a></div></div></div>
     
   </div>
 </div>
