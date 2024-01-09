@@ -140,6 +140,12 @@ tagcloud:
   min_font: 14
   max_font: 30
 
+mermaid:
+  enable: true # 启用 Mermaid 增强
+  version: latest
+  options:
+    startOnload: true
+
 cv:
   enable: true
   showInNav: true
