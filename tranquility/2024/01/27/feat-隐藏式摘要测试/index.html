@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <title>
       
-        封面测试 | 致远
+        隐藏式摘要测试 | 致远
       
     </title>
     <meta name="description" content=""/>
@@ -89,13 +89,13 @@
   <article class="post-content">
     <div class="post-inner">
       <div class="post-content__head">
-        <div class="post-title">封面测试</div>
+        <div class="post-title">隐藏式摘要测试</div>
         <div class="post-info">
           
   <a href="/tranquility/tags/text/" class="post-tag">#text</a>
 
 
-          <span class="post-date">2023-07-03</span>
+          <span class="post-date">2024-01-27</span>
         </div>
       </div>
       
@@ -105,16 +105,23 @@
             
           </div>
         
-        <p>这是一篇带封面的文章，通过设置文章的 <code>cover</code>
-字段指定封面的 URL. 封面的显示比例是
-3:2，事先将图片裁剪成该比例可以更好的显示，否则图片会被自动平铺。</p>
+        <p>本段是文章的节录
+(excerpt)，正常情况下会展示在文章列表页，但由于本文设置了
+<code>abstract</code>，本段内容会被 <code>abstract</code>
+内容覆盖作为文章摘要显示在文章列表中。</p>
 <span id="more"></span>
+<p>通过在<a
+target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>中设置
+<code>abstract</code> 字段来设置隐藏式摘要，abstract
+的设置不同于通过在正文使用 <code>&lt;!--more--&gt;</code>
+隔断的节录（excerpt）。abstract 的内容不会再出现在正文中，并且 abstrct
+会覆盖 excerpt 在文章列表的中的展示。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">隐藏式摘要测试</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-01-27 11:58:32</span><br><span class="hljs-attr">tags:</span> <span class="hljs-string">text</span><br><span class="hljs-attr">category:</span> <span class="hljs-string">featTest</span><br><span class="hljs-attr">cover:</span> <span class="hljs-string">assets/hozen-durdledoor.jpg</span><br><span class="hljs-attr">abstract:</span> <span class="hljs-string">&quot;该文章测试隐藏式摘要功能，此文本只会在文章列表展示，文章正文中不再出现。&quot;</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
 <figure>
 <img src="/tranquility/assets/hozen-durdledoor-l.jpg"
-alt="hozen 2023.6" />
-<figcaption aria-hidden="true">hozen 2023.6</figcaption>
+alt="hozen, Durdle Door, 2023.6" />
+<figcaption aria-hidden="true">hozen, Durdle Door, 2023.6</figcaption>
 </figure>
-<p>照片拍摄于侏罗纪海岸线的 Durdle Door.</p>
 
       </div>
     </div>
@@ -158,23 +165,11 @@ alt="hozen 2023.6" />
     
     <div class="post-nav">
   
-    <a class="post-nav-item-left" href="/tranquility/2023/07/03/feat-%E8%B6%85%E9%95%BF%E7%9B%AE%E5%BD%95%E6%B5%8B%E8%AF%95/">
-      <div class="text-align">
-        <svg t="1670570876164"
-             class="icon"
-             viewBox="0 0 1024 1024"
-             width="16"
-             height="16">
-          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
-        </svg>
-        <span class="text-small">上一篇</span>
-      </div>
-      <div>超长目录测试</div>
-    </a>
+    <div class="post-nav-item-left"></div>
   
   <div class="vhr"></div>
   
-    <a class="post-nav-item-right" href="/tranquility/2023/07/03/feat-%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95%202/">
+    <a class="post-nav-item-right" href="/tranquility/2024/01/09/feat-markdown%20%E7%BB%98%E5%9B%BE%E6%B5%8B%E8%AF%95/">
       <div class="text-align">
         <span class="text-small">下一篇</span>
         <svg t="1670570876164"
@@ -186,7 +181,7 @@ alt="hozen 2023.6" />
           <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
         </svg>
       </div>
-      置顶测试-2
+      markdown 绘图测试
     </a>
   
 </div>
@@ -199,7 +194,7 @@ alt="hozen 2023.6" />
 </div>
   <div class="realated__body">
     
-      <div class="null"><div class="null-item"><div class="null-title"><a href="/tranquility/2024/01/27/feat-隐藏式摘要测试/" title="隐藏式摘要测试" rel="bookmark">隐藏式摘要测试</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2023/09/21/feat-icon测试/" title="fontawesome-icons 测试" rel="bookmark">fontawesome-icons 测试</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2024/01/09/feat-markdown 绘图测试/" title="markdown 绘图测试" rel="bookmark">markdown 绘图测试</a></div></div></div>
+      <div class="null"><div class="null-item"><div class="null-title"><a href="/tranquility/2023/07/03/feat-封面测试/" title="封面测试" rel="bookmark">封面测试</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2023/09/21/feat-icon测试/" title="fontawesome-icons 测试" rel="bookmark">fontawesome-icons 测试</a></div></div><div class="null-item"><div class="null-title"><a href="/tranquility/2024/01/09/feat-markdown 绘图测试/" title="markdown 绘图测试" rel="bookmark">markdown 绘图测试</a></div></div></div>
     
   </div>
 </div>
