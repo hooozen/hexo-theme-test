@@ -113,7 +113,7 @@ zh_font:
   fontName: sourceHanSerif
   type: ttf
   style:
-    - regular
+    - normal
     - bold
 
 # 配置时间线 参考 README.md
