@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
-    <meta charset="utf8"/>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <meta charset="utf8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <title>
       
         feat-时间线测试 | 致远
       
     </title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content="hexo theme"/>
+    <meta name="description" content="" />
+    <meta name="keywords" content="hexo theme" />
     
       <link rel="apple-touch-icon"
             sizes="180x180"
-            href="/tranquility/images/apple-touch-icon.png"/>
+            href="/tranquility/images/apple-touch-icon.png" />
     
     
       <link rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/tranquility/images/favicon-32x32.png"/>
+            href="/tranquility/images/favicon-32x32.png" />
     
     
       <link rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/tranquility/images/favicon-16x16.png"/>
+            href="/tranquility/images/favicon-16x16.png" />
     
     
       <link rel="mask-icon"
             href="/tranquility/images/logo.svg"
-            color=""/>
+            color="" />
     
     
     
@@ -55,7 +55,7 @@
     
     <link rel="stylesheet"
           type="text/css"
-          href='/tranquility/css/layout.css'/>
+          href='/tranquility/css/layout.css' />
     
     
   <link rel="stylesheet" type="text/css" href="/tranquility/css/post.css"/>
@@ -63,23 +63,80 @@
 
   <meta name="generator" content="Hexo 6.3.0"></head>
   <body>
+    
+      <div id="search-mask" style="display:none">
+  <div class="search-main" id="search-main">
+    <div class="search__head">
+      <div class="search-form">
+        <svg t="1706347533072"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg"
+             p-id="7828"
+             width="20"
+             height="20">
+          <path d="M685.6 660.336l155.152 155.168a16 16 0 0 1 0 22.624l-11.312 11.328a16 16 0 0 1-22.624 0l-158.528-158.544a289.792 289.792 0 0 1-165.152 51.36C322.336 742.256 192 611.904 192 451.12 192 290.336 322.336 160 483.136 160c160.784 0 291.12 130.336 291.12 291.136 0 82.112-33.984 156.272-88.672 209.2z m-202.464 33.92c134.272 0 243.12-108.848 243.12-243.12C726.256 316.848 617.408 208 483.136 208 348.848 208 240 316.848 240 451.136c0 134.272 108.848 243.12 243.136 243.12z" fill="#000000" p-id="7829">
+          </path>
+        </svg>
+        <input id="search-input" placeholder="搜索文章">
+        <svg t="1706361500528"
+             id="search-clear"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg"
+             p-id="4351"
+             width="20"
+             height="20">
+          <path d="M512 562.688l-264.2944 264.2944-50.688-50.688L461.312 512 197.0176 247.7056l50.688-50.688L512 461.312l264.2944-264.2944 50.688 50.688L562.688 512l264.2944 264.2944-50.688 50.688L512 562.688z" fill="#00" p-id="4352">
+          </path>
+        </svg>
+      </div>
+    </div>
+    <div class="search__body" id="search-result"></div>
+    <div class="search__foot"></div>
+  </div>
+</div>
+
+    
     <div class="head">
       <div class="nav">
         <a href='/tranquility/' class="nav-logo">
-          <img alt="logo" height="60px" width="60px" src="/tranquility/images/logo.svg"/>
+          <img alt="logo" height="60px" width="60px" src="/tranquility/images/logo.svg" />
         </a>
-        <input id="navBtn" type="checkbox"/>
-        <div class="nav-menu">
+        <input id="navBtn" type="checkbox" />
+        <div class="nav-right">
           
-            
-              <a class="nav-menu-item" href="/tranquility/feat">特性测试</a>
-            
-              <a class="nav-menu-item" href="/tranquility/base">基础测试</a>
-            
+            <div class="search-outer">
+  <div class="search" id="search-btn">
+    <svg t="1706347533072"
+         class="icon"
+         viewBox="0 0 1024 1024"
+         version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         p-id="7828"
+         width="20"
+         height="20">
+      <path d="M685.6 660.336l155.152 155.168a16 16 0 0 1 0 22.624l-11.312 11.328a16 16 0 0 1-22.624 0l-158.528-158.544a289.792 289.792 0 0 1-165.152 51.36C322.336 742.256 192 611.904 192 451.12 192 290.336 322.336 160 483.136 160c160.784 0 291.12 130.336 291.12 291.136 0 82.112-33.984 156.272-88.672 209.2z m-202.464 33.92c134.272 0 243.12-108.848 243.12-243.12C726.256 316.848 617.408 208 483.136 208 348.848 208 240 316.848 240 451.136c0 134.272 108.848 243.12 243.136 243.12z" fill="#000000" p-id="7829">
+      </path>
+    </svg>
+    <span>搜索</span>
+    <span class="search-shortcut-key">Ctrl K</span>
+  </div>
+</div>
+
           
-          
+          <div class="nav-menu">
+            
+              
+                <a class="nav-menu-item" href="/tranquility/feat">特性测试</a>
+              
+                <a class="nav-menu-item" href="/tranquility/base">基础测试</a>
+              
+            
             <a class="nav-menu-item" href='/tranquility/cv/'>简历</a>
-          
+          </div>
         </div>
         <label class="nav-btn" for="navBtn"></label>
       </div>
@@ -158,7 +215,7 @@
              viewBox="0 0 1024 1024"
              width="16"
              height="16">
-          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596" />
         </svg>
         <span class="text-small">上一篇</span>
       </div>
@@ -176,7 +233,7 @@
              transform="scale(-1,-1)"
              width="16"
              height="16">
-          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596" />
         </svg>
       </div>
       超宽代码块测试
@@ -207,31 +264,11 @@
         <div class="foot__head">
           
             <div class="foot-line">
-              
-                <div class="matts">海</div>
-              
-                <div class="matts">内</div>
-              
-                <div class="matts">存</div>
-              
-                <div class="matts">知</div>
-              
-                <div class="matts">己</div>
-              
+              <div class="matts">海</div><div class="matts">内</div><div class="matts">存</div><div class="matts">知</div><div class="matts">己</div>
             </div>
           
             <div class="foot-line">
-              
-                <div class="matts">天</div>
-              
-                <div class="matts">涯</div>
-              
-                <div class="matts">若</div>
-              
-                <div class="matts">比</div>
-              
-                <div class="matts">邻</div>
-              
+              <div class="matts">天</div><div class="matts">涯</div><div class="matts">若</div><div class="matts">比</div><div class="matts">邻</div>
             </div>
           
         </div>
@@ -242,17 +279,17 @@
               <div class="foot-item__body">
                 
                   <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link.svg"/>
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link.svg" />
                     <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
                   </div>
                 
                   <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link.svg"/>
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link.svg" />
                     <a class="foot-link" target="_blank" rel="noopener" href="https://hozen.site">浩然的主页</a>
                   </div>
                 
                 <div class="text">
-                  <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link+.svg"/>
+                  <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-link+.svg" />
                   <a class="foot-link"
                      href="mailto:example@email.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
                   申请友链</a>
@@ -266,17 +303,17 @@
               <div class="foot-item__body">
                 
                   <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-github.svg"/>
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-github.svg" />
                     <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen">hooozen</a>
                   </div>
                 
                   <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-wx.svg"/>
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-wx.svg" />
                     <a class="foot-link" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI3NzQ4NDkzNg==&mid=2247484469&idx=1&sn=8a442bb67397f52cce5c38c3f9b41e36&chksm=eb64c0d2dc1349c40d2e1bb55615ae28b3f2951be22f00717b9ade98c851082e42dc666ab45d#rd">谁在胡言乱语</a>
                   </div>
                 
                   <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-zh.svg"/>
+                    <img alt="link" height="20px" width="20px" src="/tranquility/images/logo-zh.svg" />
                     <a class="foot-link" target="_blank" rel="noopener" href="https://www.zhihu.com/people/hozen">Mundooo</a>
                   </div>
                 
@@ -287,7 +324,7 @@
             <div class="foot-item__head">联系</div>
             <div class="foot-item__body">
               <div class="text">
-                <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-email.svg"/>
+                <img alt="link" height="20px" width="20px" src="/tranquility/images/icon/icon-email.svg" />
                 <a class="foot-link" href="mailto:example@email.com">example@email.com</a>
               </div>
             </div>
@@ -296,14 +333,18 @@
         <div class="copyright">
           <a href="http://theme.hozen.site/tranquility">致远</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
           <svg width="20" height="20" viewBox="0 0 725 725">
-            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
-            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
-            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
           </svg>
           <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
         </div>
       </div>
     </div>
+    
+    
+      <script src="/tranquility/js/search.js"></script>
+      <script>searchInitialize("/tranquility/search.json")</script>
     
     
   

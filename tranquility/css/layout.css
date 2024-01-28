@@ -414,6 +414,123 @@ mjx-container {
     transform: scale(0.8);
   }
 }
+.search-outer {
+  font-weight: normal;
+  margin-right: 40px;
+  color: #666;
+  cursor: pointer;
+  overflow: hidden;
+  width: 20px;
+  transition: all ease-out 200ms;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 1024px) {
+  .search-outer {
+    position: static;
+  }
+  .search-outer:hover {
+    width: 120px;
+    transform: translateX(50px);
+  }
+}
+#search-btn {
+  width: max-content;
+  display: none;
+  align-items: center;
+}
+.search__head {
+  padding: 0 20px 10px;
+}
+.search-shortcut-key {
+  display: flex;
+  padding: 2px 4px;
+  margin: 0 5px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  font-size: 0.75em;
+}
+#search-main {
+  position: absolute;
+  margin: 60px auto 0;
+  width: 500px;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 0;
+}
+@media (max-width: 760px) {
+  #search-main {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.search-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+.search-form .icon {
+  padding: 8px;
+}
+#search-clear {
+  cursor: pointer;
+}
+#search-input {
+  font-size: 18px;
+  outline: none;
+  flex: 1;
+  border: none;
+  height: 2em;
+  padding: 4px;
+}
+.search__body {
+  max-height: calc(80vh - 120px);
+  overflow: hidden auto;
+}
+@media (max-width: 760px) {
+  .search__body {
+    max-height: calc(100% - 80px);
+    padding-bottom: 10px;
+  }
+}
+.search-result-item {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #eff2f3;
+}
+.search-result__head {
+  font-size: 0.8125em;
+  color: #143c74;
+  margin: 8px 0;
+}
+.search-result__body {
+  font-size: 0.875em;
+}
+.search-keyword {
+  color: #000;
+  background: #ff0;
+}
+#search-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: rgba(200,200,200,0.8);
+}
+.search-result-empty {
+  text-align: center;
+  padding: 10px 0;
+}
 .nav {
   position: relative;
   margin: 0 auto;
@@ -517,7 +634,7 @@ mjx-container {
   .nav-btn::after {
     bottom: 25px;
   }
-  #navBtn:checked ~ .nav-menu {
+  #navBtn:checked ~ .nav-right .nav-menu {
     height: 100%;
   }
   #navBtn:checked ~ .nav-btn::before {
@@ -526,6 +643,10 @@ mjx-container {
   #navBtn:checked ~ .nav-btn::after {
     transform: translateY(-4px) rotateZ(-45deg);
   }
+}
+.nav-right {
+  display: flex;
+  align-items: center;
 }
 .foot {
   background-color: #000;
