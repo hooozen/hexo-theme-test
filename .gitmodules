@@ -1,6 +1,6 @@
 [submodule "themes/tranquility"]
 	path = themes/tranquility
-	url = ssh://git@ssh.github.com:443/hooozen/hexo-theme-tranquility.git
+	url = git@github.com:hooozen/hexo-theme-tranquility.git
 [submodule "themes/academic"]
 	path = themes/academic
-	url = ssh://git@ssh.github.com:443/hooozen/hexo-theme-academic.git
+	url = git@github.com:hooozen/hexo-theme-academic.git
