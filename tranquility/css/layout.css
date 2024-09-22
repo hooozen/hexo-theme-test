@@ -97,7 +97,7 @@ figure.highlight {
   margin: 20px 0;
   overflow: auto;
   position: relative;
-  padding-top: 30px;
+  padding-top: 32px;
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0,0,0,0.15);
   line-height: 1.5em;
@@ -111,7 +111,7 @@ figure.highlight::before {
   background: #fc625d;
   box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
   left: 12px;
-  margin-top: -20px;
+  margin-top: -22px;
   position: absolute;
   border-radius: 50%;
   content: ' ';
@@ -141,6 +141,18 @@ figure.highlight .gutter pre {
   padding: 10px;
   color: #bbb;
   background-color: #eff2f3;
+}
+figure.highlight .copy-button {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  right: 16px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
 }
 .wall {
   user-select: none;
@@ -416,7 +428,7 @@ mjx-container {
 }
 .search-outer {
   font-weight: normal;
-  margin-right: 20px;
+  margin-right: 40px;
   color: #666;
   cursor: pointer;
   overflow: hidden;
@@ -427,7 +439,6 @@ mjx-container {
 }
 @media (min-width: 1024px) {
   .search-outer {
-    margin-right: 40px;
     position: static;
   }
   .search-outer:hover {
@@ -542,6 +553,15 @@ mjx-container {
   height: 90px;
   font-weight: bold;
 }
+.head--sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(15px) saturate(0.3);
+  top: 0;
+  z-index: 1;
+}
 #navBtn {
   top: -100px;
   position: fixed;
@@ -578,9 +598,12 @@ mjx-container {
     height: 60px;
     background: rgba(255,255,255,0.9);
     z-index: 99;
+    justify-content: center;
   }
-  .body {
-    padding-top: 60px;
+  .head--sticky {
+    position: relative;
+    backdrop-filter: none;
+    background: none;
   }
   .nav-menu {
     position: fixed;
@@ -599,9 +622,6 @@ mjx-container {
   }
   .nav-menu-item {
     margin: 20px 0;
-  }
-  .nav {
-    justify-content: center;
   }
   .nav-logo {
     height: 40px;
@@ -683,9 +703,20 @@ mjx-container {
   font-size: 24px;
   margin: 10px 0;
 }
+.foot-item__body {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2.25rem;
+}
+.foot-link-group {
+  margin: 0 10px;
+}
 .foot-link {
   display: inline-block;
   padding-left: 8px;
+}
+.foot-link:hover {
+  color: #888;
 }
 .copyright {
   display: flex;
@@ -697,4 +728,15 @@ mjx-container {
 }
 .copyright a:hover {
   color: #666;
+}
+.body {
+  z-index: 0;
+}
+.head--sticky ~ .body {
+  padding-top: 90px;
+}
+@media screen and (max-width: 1023px) {
+  .body {
+    padding-top: 60px;
+  }
 }

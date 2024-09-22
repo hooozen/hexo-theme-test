@@ -97,7 +97,7 @@ figure.highlight {
   margin: 20px 0;
   overflow: auto;
   position: relative;
-  padding-top: 30px;
+  padding-top: 32px;
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0,0,0,0.15);
   line-height: 1.5em;
@@ -111,7 +111,7 @@ figure.highlight::before {
   background: #fc625d;
   box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
   left: 12px;
-  margin-top: -20px;
+  margin-top: -22px;
   position: absolute;
   border-radius: 50%;
   content: ' ';
@@ -141,6 +141,18 @@ figure.highlight .gutter pre {
   padding: 10px;
   color: #bbb;
   background-color: #eff2f3;
+}
+figure.highlight .copy-button {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  right: 16px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
 }
 /* layout */
 .wall {
