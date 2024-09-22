@@ -42,9 +42,11 @@ mermaid:
 渲染为：
 
 ```mermaid
+
 graph LR
   A --> B
   A --> D
+
 ```
 
 ## 其他
