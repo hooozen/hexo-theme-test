@@ -442,7 +442,7 @@ mjx-container {
     position: static;
   }
   .search-outer:hover {
-    width: 120px;
+    width: 140px;
     transform: translateX(50px);
   }
 }
@@ -491,6 +491,7 @@ mjx-container {
   padding: 8px;
 }
 #search-clear {
+  display: none;
   cursor: pointer;
 }
 #search-input {
