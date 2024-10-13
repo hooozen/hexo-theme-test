@@ -10,6 +10,7 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "trqlt": "hexo server --config _config.yml,_build.tranquility.yml",
+    "trqlten": "hexo server --config _config.yml,_build.tranquility_en.yml",
     "acdmc": "hexo server --config _config.yml,_build.academic.yml"
   },
   "hexo": {

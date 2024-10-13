@@ -1,0 +1,30 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 致远
+subtitle: "Hexo Theme | Tranquility"
+description: ""
+keywords:
+  - hexo theme
+author: Hozen
+language: en
+timezone: ""
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://theme.hozen.site/tranquility
+
+# Directory
+public_dir: public/tranquility_en
+
+theme: tranquility_en
+
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: true
