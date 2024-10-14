@@ -5,23 +5,39 @@
   <meta name="description" content="李白的简历" />
   <head>
     
-      
-  <style>
-    @font-face {
-        font-family:sourceHanSerif;
-        src: url(/tranquility/font/normal.ttf);
-        font-weight: normal;
-    }
-  </style>
+      <style>
 
-  <style>
-    @font-face {
-        font-family:sourceHanSerif;
-        src: url(/tranquility/font/bold.ttf);
-        font-weight: bold;
-    }
-  </style>
+@font-face {
+  font-family: sourceHanSerif;
+  src: url(/tranquility/font/normal.ttf);
+  font-weight: normal;
+}
 
+@font-face {
+  font-family: sourceHanSerif;
+  src: url(/tranquility/font/bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: AfacadFlux;
+  src: url(/tranquility/font/AfacadFlux-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: AfacadFlux;
+  src: url(/tranquility/font/AfacadFlux-SemiBold.ttf);
+  font-weight: bold;
+}
+
+:root {
+  --fancy-font: sourceHanSerif;
+}
+
+[lang=en] {
+  --fancy-font: AfacadFlux, sourceHanSerif;
+}
+</style>
 
     
     <link rel="stylesheet" href="/tranquility/css/cv.css" />
@@ -918,7 +934,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         
       </article>
       <footer>
-        <a class="online-link" href="http://theme.hozen.site/tranquility/cv">查看在线简历获得实时更新</a>
+        <a class="online-link" href="http://theme.hozen.site/tranquility/cv">查看在线版本</a>
         <a class="enginer"
            target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Generate by Tranquility</a>
       </footer>

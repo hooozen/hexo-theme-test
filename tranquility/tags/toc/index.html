@@ -34,23 +34,39 @@
     
     
     
-      
-  <style>
-    @font-face {
-        font-family:sourceHanSerif;
-        src: url(/tranquility/font/normal.ttf);
-        font-weight: normal;
-    }
-  </style>
+      <style>
 
-  <style>
-    @font-face {
-        font-family:sourceHanSerif;
-        src: url(/tranquility/font/bold.ttf);
-        font-weight: bold;
-    }
-  </style>
+@font-face {
+  font-family: sourceHanSerif;
+  src: url(/tranquility/font/normal.ttf);
+  font-weight: normal;
+}
 
+@font-face {
+  font-family: sourceHanSerif;
+  src: url(/tranquility/font/bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: AfacadFlux;
+  src: url(/tranquility/font/AfacadFlux-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: AfacadFlux;
+  src: url(/tranquility/font/AfacadFlux-SemiBold.ttf);
+  font-weight: bold;
+}
+
+:root {
+  --fancy-font: sourceHanSerif;
+}
+
+[lang=en] {
+  --fancy-font: AfacadFlux, sourceHanSerif;
+}
+</style>
 
     
     <link rel="stylesheet"
@@ -200,13 +216,17 @@
   <div class="foot-inner">
     <div class="foot__head">
       
-        <div class="foot-line">
-          <div class="matts">海</div><div class="matts">内</div><div class="matts">存</div><div class="matts">知</div><div class="matts">己</div>
-        </div>
+        
+          <div class="foot-line">
+            <div class="matts">海</div><div class="matts">内</div><div class="matts">存</div><div class="matts">知</div><div class="matts">己</div>
+          </div>
+        
       
-        <div class="foot-line">
-          <div class="matts">天</div><div class="matts">涯</div><div class="matts">若</div><div class="matts">比</div><div class="matts">邻</div>
-        </div>
+        
+          <div class="foot-line">
+            <div class="matts">天</div><div class="matts">涯</div><div class="matts">若</div><div class="matts">比</div><div class="matts">邻</div>
+          </div>
+        
       
     </div>
     <div class="foot__body">
@@ -453,13 +473,15 @@
       </div>
     </div>
     <div class="copyright">
-      <a href="http://theme.hozen.site/tranquility">致远</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
-      <svg width="20" height="20" viewBox="0 0 725 725">
-        <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
-        <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
-        <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
-      </svg>
-      <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+      
+        <a href="http://theme.hozen.site/tranquility">致远</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+        <svg width="20" height="20" viewBox="0 0 725 725">
+          <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
+          <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
+          <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
+        </svg>
+        <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+      
     </div>
   </div>
 </div>
