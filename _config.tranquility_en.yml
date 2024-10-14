@@ -1,4 +1,4 @@
-slogan: “Tranquility Yields Transcendence.”
+slogan: Tranquility Yields Transcendence.
 email: example@email.com
 logo: "/images/logo.svg"
 
@@ -41,8 +41,8 @@ index: # 配置首页个性化内容
 
 foot:
   title:
-    - "Though miles apart"
-    - "friends are close at heart."
+    - "Though Miles Apart,"
+    - "Friends Are Close at Heart."
   linksRows: 4
 
 links: # 朋友
@@ -172,65 +172,64 @@ cv:
   enable: true
   showInNav: true
   iconPrefix: fas
-  keywords: 简历,李白
-  description: 李白的简历
-  title: 李白的简历
+  keywords: CV, Li Bai
+  description: Li Bai's CV
+  title: Li Bai's CV
   content:
-    title: 李白
+    title: Li Bai
     baseInfo:
-      - 唐朝
-      - 诗人
-      - 太白
-      - 青莲居士
-    tel: 八八八八八
-    email: 李白@唐.中文
-    github: 暂无
+      - Tang Dynasty
+      - Poet
+      - Taibai
+      - Qinglian Jushi
+    tel: 88888
+    email: libai@tang.chinese
+    github: None
     blog: Tranquility
     blogHref: https://theme.hozen.site/tranquility/
     edu:
-      title: "教育背景"
+      title: "Education Background"
       content:
-        - 701 至 715，修习诗词剑术
-        - 718 至 724，蜀地隐居
+        - 701 to 715, Studied poetry and swordsmanship
+        - 718 to 724, Lived in seclusion in Shu
     chapters:
-      - title: "代表作品"
+      - title: "Representative Works"
         icon: person-digging
-        tips: 请点击项目名称查看项目详情
+        tips: Click on the project name for details
         sections:
-          - title: 蜀道难
+          - title: Difficulty in Shu Road
             link: https://so.gushiwen.cn/shiwenv_d59ec5d6c91c.aspx
-            description: 乐府诗、浪漫主义
+            description: Yuefu Poem, Romanticism
             content:
-              - 天宝元年
-              - 这首诗是袭用乐府旧题，意在送友人入蜀。诗人以浪漫主义的手法，展开丰富的想象，艺术地再现了蜀道峥嵘，突兀，强悍、崎岖等奇丽惊险和不可凌越的磅礴气势，借以歌咏蜀地山川的壮秀，显示出祖国山河的雄伟壮丽。
-              - 至于本诗是否有更深的寓意，历代有各种不同看法。然而就诗论诗，不一定强析有寓意。但从诗中，“所守或匪亲，化为狼与豺”看，却是在写蜀地山川峻美的同时，告诫当局，蜀地险要，应好好用人防守。
-              - 诗采用律体与散文间杂，文句参差，笔意纵横，豪放洒脱。全诗感情强烈，一唱三叹，回环反复，读来令人心潮激荡。
-          - title: 将进酒
+              - First year of Tianbao
+              - This poem reused an old Yuefu title and was intended to bid farewell to a friend going to Shu. The poet employs romanticist techniques, using rich imagination to artistically recreate the rugged, overpowering, and treacherous landscape of Shu Road, singing praises of Shu's majestic scenery and showcasing the grandeur of China's rivers and mountains.
+              - The deeper meaning of this poem has been debated through the ages. While it doesn’t necessarily need a symbolic interpretation, the line “the officials may not be kin, turning into wolves and tigers” serves as a caution to guard the crucial region of Shu properly. The poem uses a mix of regulated and unrhymed styles, with varied lines and free-flowing thoughts, creating a forceful and evocative read that stirs deep emotions.
+          - title: Bring in the Wine
             link: https://so.gushiwen.cn/shiwenv_ee16df5673bc.aspx
-            description: 乐府七言歌行
+            description: Yuefu Seven-character Song
             content:
-              - 开元二十二年
-              - 这首诗是诗人当时和友人岑勋在嵩山另一老友元丹丘的颍阳山居作客，作者正值仕途遇挫之际，所以借酒兴诗，来了一次酣畅淋漓的抒发。在这首诗里，李白“借题发挥”，借酒消愁，感叹人生易老，抒发了自己怀才不遇的心情。
-              - 这首诗十分形象的体现了李白桀骜不驯的性格：对自己充满自信、孤高自傲、热情豪放，“天生我材必有用”、“人生得意须尽欢”。全诗气势豪迈，感情豪放，言语流畅，具有极强的感染力。李白咏酒的诗歌非常能体现他的个性，思想内容深沉，艺术表现成熟。《将进酒》即为其代表作。
-      - title: 工作经验
+              - 22nd year of Kaiyuan
+              - This poem was written while Li Bai was visiting his friend Cen Xun and another old friend Yuan Danqiu at his Yingyang mountain residence in Song Mountain. Going through career setbacks, Li Bai expressed his emotions through a joyful and unrestrained poetic outpour. In this poem, he uses the theme of wine to vent his sorrows and lament the fleeting nature of life and his unrecognized talent.
+              - Most vividly, this poem reflects Li Bai's proud and unyielding character: confident, aloof, passionate, and unrestrained. Phrases like "A talent born will be of use" and "One must take all joy while alive" showcase an exuberant and infectious spirit. Li Bai's wine-themed poetry epitomizes his personality, with deep thematic content and mature artistic expression. "Bring in the Wine" stands as a representative piece of his work.
+      - title: Work Experience
         icon: laptop-code
         sections:
-          - title: 大唐翰林供奉
+          - title: Hanlin Official of the Tang Dynasty
             description: 743 - 744
             content:
-              - 赐宫锦袍。暮春，兴庆池牡丹盛开，玄宗与杨玉环同赏，李白又奉诏作《清平调》。对御用文人生活日渐厌倦，始纵酒以自昏秽。
-              - 与贺知章等人结“酒中八仙”之游，玄宗呼之不朝。尝奉诏醉中起草诏书，引足令高力士脱靴，宫中人恨之，谗谤于玄宗，玄宗疏之，后玄宗赐金放还。
-      - title: 荣誉奖项
+              - Bestowed a brocade robe. In late spring, with peonies blooming by Xingqing Pond, Emperor Xuanzong, along with Yang Yuhuan, admired the flowers while Li Bai was commanded to write the "Qingping Melody". Gradually tired of the court poet's life, he began to indulge heavily in alcohol.
+              - Became part of the “Eight Immortals of the Wine Cup” with He Zhizhang and others. When called by the Emperor, he often did not attend court duties. Once, he was summoned to draft an imperial edict while drunk, and famously made the eunuch Gao Lishi remove his boots. This led to resentment in the palace, and he was slandered before the emperor, who distanced him and eventually granted him gold to leave the court.
+      - title: Honors and Awards
         icon: trophy
         list: true
         content:
-          - 诗仙
-          - 酒中八仙
-      - title: 个人小结
+          - Immortal Poet
+          - One of the Eight Immortals of the Wine Cup
+      - title: Personal Summary
         icon: ranking-star
         content:
-          - 为人爽朗大方，乐于交友，爱好饮酒作诗，名列“酒中八仙”  。曾经得到唐玄宗李隆基赏识，担任翰林供奉， 赐金放还，游历全国，先后迎娶宰相许圉师、宗楚客的孙女。唐肃宗即位后，卷入永王之乱，流放夜郎，辗转到达当涂县令李阳冰家。上元二年，去世，时年六十二。
-          - 著有《李太白集》，代表作有《望庐山瀑布》《行路难》《蜀道难》《将进酒》《早发白帝城》等。 李白所作词赋，就其开创意义及艺术成就而言，享有极为崇高的地位，后世誉为“诗仙”，与诗圣杜甫并称“李杜”。
+          - Cheerful and generous, loves making friends, passionate about drinking wine and composing poetry, and honored as one of the “Eight Immortals of the Wine Cup.” Recognized by Emperor Xuanzong of the Tang Dynasty, he served as an imperial scholar, was bestowed gold, traveled extensively, and married the granddaughters of chancellors Xu Yushi and Zong Chuke. During Emperor Suzong's reign, he got entangled in the Yongwang Rebellion and was exiled to Ye Lang, eventually reaching Li Yangbing's residence in Dangtu County. He passed away in the second year of Shangyuan at the age of sixty-two.
+          - Authored "The Collected Works of Li Bai". Famous works include "Viewing the Waterfall at Mount Lu", "Hard Road to Travel", "Difficulty in Shu Road", "Bring in the Wine", and "Setting off from Baidi Town at Dawn". Li Bai's poetry enjoys an extremely high status for its innovative approach and artistic accomplishment, earning him the title of "Immortal Poet". Along with Du Fu, he is recognized as one of the greatest poets in Chinese literary history, often referred to as "Li-Du".
 
 search:
   path: search.json
