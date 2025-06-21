@@ -9,7 +9,7 @@ p {
 }
 body {
   font-size: 16px;
-  font-family: var(--fancy-font);
+  font-family: sourceHanSerif;
 }
 @media print {
   html,
@@ -104,7 +104,6 @@ footer {
 .online-link {
   display: block;
   margin: 10px 0;
-  font-family: serif;
 }
 .enginer {
   margin: 20px 0;

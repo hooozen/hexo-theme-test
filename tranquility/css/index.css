@@ -30,7 +30,6 @@
   font-weight: 600;
   font-size: 72px;
   animation: flyIn 500ms ease-out;
-  font-family: var(--fancy-font);
 }
 .wall-subtitle {
   font-size: 36px;
@@ -41,7 +40,7 @@
   font-size: 20px;
   font-weight: 400;
   margin: 10px 0;
-  font-family: var(--fancy-font);
+  font-family: sourceHanSerif;
   letter-spacing: 0.2em;
 }
 #heart-curve {
@@ -81,7 +80,7 @@
 .poem {
   font-size: 18px;
   position: absolute;
-  font-family: var(--fancy-font);
+  font-family: sourceHanSerif;
   left: 50%;
   top: calc(50% + 80px);
   opacity: 0.2;
@@ -94,7 +93,6 @@
 }
 .about-photo {
   width: 300px;
-  flex: 0 0 300px;
   height: 450px;
   background: url("") center center/cover no-repeat;
   margin: 0 10px;
@@ -106,7 +104,7 @@
 }
 .about-text {
   font-weight: bold;
-  font-family: var(--fancy-font);
+  font-family: sourceHanSerif;
 }
 .about-title {
   text-align: center;
@@ -429,10 +427,6 @@
     justify-content: center;
     align-items: center;
   }
-  .about-photo {
-    flex-basis: auto;
-    align-self: center;
-  }
   .about-text {
     margin-bottom: 50px;
   }
@@ -477,9 +471,6 @@
   .normal-eqt img {
     width: 200px;
   }
-}
-html[lang=en] .about-detail {
-  letter-spacing: normal;
 }
 @-moz-keyframes spark {
   0% {

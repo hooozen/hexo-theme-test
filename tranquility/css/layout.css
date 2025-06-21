@@ -321,7 +321,7 @@ mjx-container {
   color: #ee4242;
 }
 .like-text {
-  font-family: var(--fancy-font);
+  font-family: sourceHanSerif;
   margin: 0.5em 0 1em;
   font-weight: bold;
   color: #666;
@@ -442,7 +442,7 @@ mjx-container {
     position: static;
   }
   .search-outer:hover {
-    width: 140px;
+    width: 120px;
     transform: translateX(50px);
   }
 }
@@ -491,7 +491,6 @@ mjx-container {
   padding: 8px;
 }
 #search-clear {
-  display: none;
   cursor: pointer;
 }
 #search-input {
@@ -681,14 +680,14 @@ mjx-container {
   padding: 40px 0 10px;
 }
 .foot-item {
-  margin: 20px;
+  margin: 22px;
   line-height: 40px;
 }
 .foot__head {
-  margin: 0 10px 50px;
+  margin: 0 20px 50px;
   font-size: 36px;
   font-weight: bold;
-  font-family: var(--fancy-font);
+  font-family: sourceHanSerif;
   cursor: default;
   display: flex;
   flex-wrap: wrap;

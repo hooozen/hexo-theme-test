@@ -1,40 +1,28 @@
-const copyText = {
-  get copy() {
-    return document.documentElement.lang === "en" ? "copy" : "复制代码";
-  },
-  get copyError() {
-    return document.documentElement.lang === "en" ? "error" : "发生错误";
-  },
-  get copied() {
-    return document.documentElement.lang === "en" ? "copied!" : "已复制";
-  },
-};
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const getCopyButton = () => {
-    const button = document.createElement("div");
-    button.innerHTML = copyText.copy;
-    button.className = "copy-button";
-    return button;
-  };
+    const button = document.createElement("div")
+    button.innerHTML = `复制代码`
+    button.className = 'copy-button'
+    return button
+  }
 
-  const codeBlocks = document.querySelectorAll("figure.highlight");
+  const codeBlocks = document.querySelectorAll('figure.highlight')
 
   codeBlocks.forEach((codeBlock) => {
     const copyButton = getCopyButton();
     copyButton.onclick = () => {
       try {
-        const code = codeBlock.querySelector("code").innerText;
+        const code = codeBlock.querySelector('code').innerText
         navigator.clipboard.writeText(code);
-        copyButton.innerText = copyText.copied;
+        copyButton.innerText = '已复制!'
       } catch {
-        copyButton.innerText = copyText.copyError;
+        copyButton.innerText = '发生错误'
       } finally {
         setTimeout(() => {
-          copyButton.innerText = copyText.copy;
-        }, 1000);
+          copyButton.innerText = '复制代码'
+        }, 1000)
       }
-    };
-    codeBlock.appendChild(copyButton);
-  });
-});
+    }
+    codeBlock.appendChild(copyButton)
+  })
+})

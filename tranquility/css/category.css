@@ -34,7 +34,7 @@
   font-size: 32px;
 }
 .wall-category-description {
-  font-family: var(--fancy-font);
+  font-family: sourceHanSerif;
   text-align: center;
   margin: 10px 0;
 }
@@ -132,7 +132,7 @@
   max-width: 900px;
   font-size: 40px;
   padding: 80px 0 20px;
-  font-family: sourceSans, var(--fancy-font);
+  font-family: sourceSans, sourceHanSerif;
 }
 @media screen and (max-width: 1023px) {
   .wall-category .tag-page-title {
