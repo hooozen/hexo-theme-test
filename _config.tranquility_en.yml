@@ -239,3 +239,7 @@ search:
 
 nav:
   sticky: false
+
+google_ad:
+  enable: true
+  meta_tag: ca-pub-7713704413230895 # Google Analytics meta tag
