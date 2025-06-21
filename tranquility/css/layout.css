@@ -428,7 +428,7 @@ mjx-container {
 }
 .search-outer {
   font-weight: normal;
-  margin-right: 40px;
+  margin-right: 20px;
   color: #666;
   cursor: pointer;
   overflow: hidden;
@@ -439,6 +439,7 @@ mjx-container {
 }
 @media (min-width: 1024px) {
   .search-outer {
+    margin-right: 40px;
     position: static;
   }
   .search-outer:hover {
