@@ -27,8 +27,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       hexo-pagination:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^4.0.0
+        version: 4.0.0
       hexo-related-popular-posts:
         specifier: ^5.0.1
         version: 5.0.1
@@ -79,6 +79,7 @@ packages:
   '@xmldom/xmldom@0.9.8':
     resolution: {integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==}
     engines: {node: '>=14.6'}
+    deprecated: this version has critical issues, please update to the latest version
 
   a-sync-waterfall@1.0.1:
     resolution: {integrity: sha512-RYTOHHdWipFUliRFMCS4X2Yn2X8M87V/OpSqWzKKOGhzqyUxzyVmhHDH9sAvG+ZuQf/TAOFsLCpMw09I1ufUnA==}
@@ -696,7 +697,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   googleapis@1.1.5:
     resolution: {integrity: sha512-eoy/QAkhohkjziIpqybTsUtPxMDmtVjK4uJSCerU7RcrVu9qae7tJIvRsyMgHJ7fF90FV/j8Wv2ESsGzZqUwxA==}
@@ -802,6 +803,10 @@ packages:
   hexo-pagination@3.0.0:
     resolution: {integrity: sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw==}
     engines: {node: '>=14'}
+
+  hexo-pagination@4.0.0:
+    resolution: {integrity: sha512-jNG6AX3EHzY3FRfdzB46tZ833CUX4WudZue3yv6kKaVCCWR61iwFL9LD6xQadvwHBuT1oHy444dJClWORG4sxg==}
+    engines: {node: '>=18'}
 
   hexo-related-popular-posts@5.0.1:
     resolution: {integrity: sha512-X+7leZ708sXq1bgayful2HaGU22XAGPDZjqzpFUoeP8mXmJL51E2p66gqs7Xu+rygu4MMJQJvRK/fzGbHa8eqQ==}
@@ -1103,6 +1108,7 @@ packages:
 
   mathjax-full@3.2.2:
     resolution: {integrity: sha512-+LfG9Fik+OuI8SLwsiR02IVdjcnRCy5MufYLi0C3TdMT56L/pjB0alMVGgoWJF8pN9Rc7FESycZB9BMNWIid5w==}
+    deprecated: Version 4 replaces this package with the scoped package @mathjax/src
 
   meow@2.0.0:
     resolution: {integrity: sha512-X7rkdgy5Wxxp2MhCiAOkC3lqfkrJkt3iXvW4BY0rYQIn3GMvYvBTsAPEmHHTjTeVzBelrRcQa2F80rYfigz2+A==}
@@ -1183,6 +1189,7 @@ packages:
 
   moize@6.1.6:
     resolution: {integrity: sha512-vSKdIUO61iCmTqhdoIDrqyrtp87nWZUmBPniNjO0fX49wEYmyDO4lvlnFXiGcaH1JLE/s/9HbiK4LSHsbiUY6Q==}
+    deprecated: This library has been deprecated in favor of micro-memoize, which as-of version 5 incorporates most of the functionality that this library offers at nearly half the size and better speed.
 
   moment-timezone@0.5.48:
     resolution: {integrity: sha512-f22b8LV1gbTO2ms2j2z13MuPogNoh5UzxL3nzNAYKGraILnbGc9NEE6dyiiiLv46DGRb8A4kg8UKWLjPthxBHw==}
@@ -1717,6 +1724,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -2547,6 +2555,8 @@ snapshots:
       picocolors: 1.1.1
 
   hexo-pagination@3.0.0: {}
+
+  hexo-pagination@4.0.0: {}
 
   hexo-related-popular-posts@5.0.1:
     dependencies:
